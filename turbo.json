@@ -4,7 +4,7 @@
     "build": {
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "dependsOn": ["^build"],
-      "outputs": ["apps/*/build", "root/composer", "root/core"]
+      "outputs": ["root/**"],
     },
     "lint": {},
     "dev": {
