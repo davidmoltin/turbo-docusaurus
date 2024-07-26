@@ -226,30 +226,30 @@ const sidebarsDefault = {
       items: require("./docs/api/commerce-extensions/sidebar.js")
     },
   ],
-  flows: [
-    {
-      type: "category",
-      label: "Authentication",
-      link: {
-        type: "generated-index",
-        title: "Authentication API",
-        slug: "/api/authentication"
-      },
+  //flows: [
+  //  {
+  //    type: "category",
+  //    label: "Authentication",
+  //    link: {
+  //      type: "generated-index",
+  //      title: "Authentication API",
+  //      slug: "/api/authentication"
+  //    },
       // @ts-ignore
-      items: require("./docs/api/authentication/sidebar.js")
-    },
-    {
-      type: "category",
-      label: "Flows",
-      link: {
-        type: "generated-index",
-        title: "Flows API",
-        slug: "/api/flows"
-      },
-      // @ts-ignore
-      items: require("./docs/api/flows/sidebar.js")
-    },
-  ],
+  //    items: require("./docs/api/authentication/sidebar.js")
+  //  },
+  //  {
+  //    type: "category",
+  //    label: "Flows",
+  //    link: {
+  //      type: "generated-index",
+  //      title: "Flows API",
+  //      slug: "/api/flows"
+  //    },
+  //    // @ts-ignore
+  //    items: require("./docs/api/flows/sidebar.js")
+  //  },
+  //],
   integrations: [
     {
       type: "category",
