@@ -471,16 +471,16 @@ const config = {
               categoryLinkSource: "tag",
             },
           },
-          flows: {
-            specPath: "openapispecs/flows/flows.yaml",
-            outputDir: "docs/api/flows",
-            downloadUrl:
-              "https://raw.githubusercontent.com/elasticpath/elasticpath-dev/main/openapispecs/flows/flows.yaml",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-              categoryLinkSource: "tag",
-            },
-          },
+         // flows: {
+          //  specPath: "openapispecs/flows/flows.yaml",
+          //  outputDir: "docs/api/flows",
+          //  downloadUrl:
+          //    "https://raw.githubusercontent.com/elasticpath/elasticpath-dev/main/openapispecs/flows/flows.yaml",
+          //  sidebarOptions: {
+          //    groupPathsBy: "tag",
+          //    categoryLinkSource: "tag",
+          //  },
+          //},
           integrations: {
             specPath: "openapispecs/integrations/openapi.yaml",
             outputDir: "docs/api/integrations",
