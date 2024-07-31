@@ -461,16 +461,6 @@ const config = {
               categoryLinkSource: "tag",
             },
           },
-          personaldata: {
-            specPath: "openapispecs/personaldata/OpenAPISpec.yaml",
-            outputDir: "docs/api/personal-data/",
-            downloadUrl:
-              "https://raw.githubusercontent.com/elasticpath/elasticpath-dev/main/openapispecs//OpenAPISpec.yaml",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-              categoryLinkSource: "tag",
-            },
-          },
           exporter: {
             specPath: "openapispecs/exporter/exporter.yaml",
             outputDir: "docs/api/exporter",
