@@ -250,7 +250,7 @@ const config = {
           },
           {
             label: "Changelog",
-            to: "https://elasticpath.dev/changelog-landing",
+            to: "pathname:///changelog-landing",
             target: "_self",
           },
           {
@@ -263,7 +263,7 @@ const config = {
           },
           {
             label: "Get in Touch",
-            href: "https://www.elasticpath.com/get-in-touch",
+            href: "pathname:///get-in-touch",
             position: "right",
             className: "navbar-book-demo",
           },
@@ -274,51 +274,6 @@ const config = {
             className: "dev-portal-signup dev-portal-link",
           },
         ],
-      },
-      footer: {
-        style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Elastic Path Software`,
       },
       prism: {
         theme: lightCodeTheme,

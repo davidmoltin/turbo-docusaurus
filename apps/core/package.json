@@ -1,12 +1,11 @@
 {
-  "name": "core",
+  "name": "elsaticpath-docs",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "dev": "pnpm re-gen && docusaurus start --port 3001",
-    "start": "pnpm docusaurus start",
-    "build": "pnpm docusaurus build",
+    "start": "yarn re-gen && docusaurus start",
+    "build": "yarn re-gen && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -30,14 +29,10 @@
     "@docusaurus/remark-plugin-npm2yarn": "^2.4.3",
     "@docusaurus/theme-live-codeblock": "^2.4.3",
     "@docusaurus/theme-mermaid": "^2.4.3",
-    "@docusaurus/theme-common": "^2.4.3",
-    "@docusaurus/theme-classic": "2.4.3",
-    "@docusaurus/utils-common": "^2.4.3",
     "@easyops-cn/docusaurus-search-local": "^0.36.0",
     "@fluentui/react-icons": "^2.0.230",
     "@headlessui/react": "^1.7.14",
     "@mdx-js/react": "^1.6.22",
-    "param-case": "^4.0.0",
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-tabs": "^1.0.4",
     "@styled-icons/boxicons-logos": "^10.47.0",
@@ -51,7 +46,6 @@
     "docusaurus-plugin-openapi-docs": "^2.1.3",
     "docusaurus-theme-openapi-docs": "^2.1.3",
     "framer-motion": "^11.2.10",
-    "js-yaml": "^4.1.0",
     "postcss": "^8.4.35",
     "posthog-docusaurus": "^2.0.0",
     "prism-react-renderer": "^1.3.5",
@@ -60,8 +54,6 @@
     "react-dom": "^18.0.2",
     "react-feather": "^2.0.10",
     "react-highlight": "^0.15.0",
-    "react-live": "^4.1.7",
-    "react-markdown": "^9.0.1",
     "react-parallax-tilt": "^1.7.227",
     "styled-components": "^6.1.8",
     "tailwindcss": "^3.4.1",
@@ -80,7 +72,6 @@
     ]
   },
   "devDependencies": {
-    "lerna": "^8.1.7",
     "prettier": "3.2.5"
   }
 }
