@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "dev": "pnpm re-gen && docusaurus start --port 3001",
     "start": "pnpm docusaurus start",
-    "build": "pnpm re-gen && docusaurus build",
+    "build": "pnpm docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

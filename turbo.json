@@ -4,7 +4,12 @@
     "build": {
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "dependsOn": ["^build"],
-      "outputs": ["root/**"]
+      "outputs": [
+        "public/**",
+        "build/**",
+        ".cache/**",
+        ".vercel/**"
+      ]
     },
     "lint": {},
     "dev": {

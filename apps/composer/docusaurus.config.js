@@ -222,7 +222,7 @@ const config = {
         items: [
           {
             label: "Guides",
-            to: "guides",
+            to: "https://elasticpath.dev/guides",
           },
           {
             label: "Docs",
@@ -250,7 +250,8 @@ const config = {
           },
           {
             label: "Changelog",
-            to: "/changelog-landing",
+            to: "https://elasticpath.dev/changelog-landing",
+            target: "_self",
           },
           {
             label: "Support",

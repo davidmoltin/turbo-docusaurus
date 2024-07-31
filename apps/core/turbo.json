@@ -8,7 +8,8 @@
       "outputs": [
         "public/**",
         ".cache/**",
-        ".vercel/**"
+        ".vercel/**",
+        "build/**"
       ],
       "env": [
         "NODE_ENV"

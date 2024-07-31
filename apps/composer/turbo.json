@@ -6,9 +6,10 @@
   "tasks": {
     "build": {
       "outputs": [
-        "public/composer/**",
-        ".cache/composer/**",
-        ".vercel/composer/**"
+        "public/**",
+        ".cache/**",
+        ".vercel/**",
+        "build/**"
       ],
       "env": [
         "NODE_ENV"
