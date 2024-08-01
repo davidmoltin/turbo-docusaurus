@@ -5,7 +5,7 @@ description: Learn how to write a custom component that wraps an HTTP-base third
 ---
 
 import Screenshot from "@site/src/components/screenshot";
-import Vimeo from "@site/src/components/vimeo";
+
 
 Component authors are frequently asked to develop a component that implements a series of API calls for some third-party service (or possibly your own company's API).
 If the API you're creating a component for has an OpenAPI or WSDL spec, you can have `prism` [generate a component](/docs/composer/builder/custom-components/writing-custom-components.mdx#custom-components-from-wsdls-or-openapi-specs) based off of your YAML, JSON, or XML spec file.
@@ -14,10 +14,6 @@ If, however, your API does not have an OpenAPI or WSDL spec, or if you're just l
 The code for our custom component is available on [GitHub](https://github.com/prismatic-io/examples/tree/main/components/acmeerp).
 Let's dive into the code here.
 
-<Vimeo
-  video="894996672"
-  title="How to Wrap a RESTful API in a Custom Component"
-/>
 
 ## Our component's spec
 

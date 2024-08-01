@@ -8,7 +8,7 @@ import ExampleTabs from "@site/src/components/example-tabs";
 import TabItem from "@theme/TabItem";
 import Icon from "@mui/material/Icon";
 import Screenshot from "@site/src/components/screenshot";
-import Vimeo from "@site/src/components/vimeo";
+
 
 When something goes wrong (perhaps a REST endpoint you rely on goes down, or an integration starts taking five minutes when you expect it to take five seconds) your incident response team should be alerted right away.
 It should never be the case that customers are **calling you** to inform you that your integrations are down.
@@ -18,11 +18,6 @@ With properly configured monitoring and alerting you can put your mind at ease -
 
 Builder alert monitors are configurable.
 You can choose from a variety of alert triggers, including triggering on elevated log levels, long execution times, failed executions, etc., and you can notify your integration team via email and SMS, or via Slack, Pager Duty, OpsGenie, or any other notification system you choose by using webhooks.
-
-<Vimeo
-  video="499651619"
-  title="How to Alert People When an Instance has an Error"
-/>
 
 ## Terminology
 
@@ -237,8 +232,6 @@ When an alert monitor using this alert webhook fires, an incident is created in 
 />
 
 ### Sending notifications to Slack with alert webhooks
-
-<Vimeo video="500205967" title="How to Send Alerts to Slack" />
 
 Many operations teams use Slack to notify themselves of production issues.
 Builder alert webhooks can be configured to send messages to a Slack channel.
@@ -584,8 +577,6 @@ Under the instance's **Monitors** tab, select a monitor.
 This will bring you to the same screen you saw when you created the monitor, where you can modify who is notified under what conditions under the **Details** tab.
 
 ### Clearing a triggered alert monitor
-
-<Vimeo video="500203509" title="How to Respond to an Alert Message" />
 
 If multiple team members are notified by an alert event, it's important for the team to know if the event has been addressed.
 By marking an alert monitor as "cleared", your team member acknowledges the event and indicates that they are working to resolve the issue.

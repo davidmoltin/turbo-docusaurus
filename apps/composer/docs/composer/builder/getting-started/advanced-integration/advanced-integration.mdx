@@ -5,7 +5,7 @@ description: Build out a full integration that syncs data between Zendesk and Gi
 ---
 
 import Screenshot from "@site/src/components/screenshot";
-import Vimeo from "@site/src/components/vimeo";
+
 import ExampleIntegrationLink from "@site/src/components/example-integration-link";
 
 The intro guide [Your First Integration](/docs/composer/builder/getting-started/first-integration/build-first-integration.mdx) walked you through basic concepts in Builder, like fetching data from an API, passing data between steps of an integration, and using built-in connectors to send data to a third-party app.
@@ -17,8 +17,6 @@ We'll build a more complex integration from start to finish that uses webhooks t
 For this example, pretend that we are engineers at [Zendesk](https://www.zendesk.com/) (or a similar customer service SaaS).
 Some of our customers are software companies and maintain public [GitHub](https://github.com/) repositories.
 They've asked for an integration that syncs GitHub repository **issues** with Zendesk **tickets**.
-
-<Vimeo video="923043480" />
 
 Our product team provided us with this spec for an integration:
 
@@ -48,8 +46,6 @@ If you'd like to follow along with this example, you can download the YAML defin
 When building any integration, the first step is to make sure you can connect to all apps that you're integrating with.
 This video covers how to connect to both Zendesk and GitHub.
 
-<Vimeo video="923061312" />
-
 :::note Correction: use the repo scope
 This video erroneously uses a `repos` scope for GitHub that does not exist.
 That should be singular `repo` instead.
@@ -70,8 +66,6 @@ This means your customers can connect their GitHub and Zendesk accounts by click
 
 We want our integration to be event-driven, so that when something happens in one app (like a comment being made on a GitHub issue), our integration is alerted to the change so it can make a corresponding change in Zendesk.
 This video covers how to handle webhook requests from GitHub.
-
-<Vimeo video="923063791" />
 
 GitHub will send our integration several types of webhook requests, including:
 
@@ -142,8 +136,6 @@ In the previous video, we manually set up webhooks in GitHub.
 But, that's not a process that we want our customers to go through.
 In this video, we'll automate the process of setting up webhooks in GitHub and Zendesk when a customer deploys our integration.
 
-<Vimeo video="923064368" />
-
 To run some "setup" logic when an instance of our integration is deployed, we'll use an [Instance Deploy](/docs/composer/builder/builder-components/management-triggers.mdx#instance-deploy) trigger.
 You can similarly use an [Instance Remove](/docs/composer/builder/builder-components/management-triggers.mdx#instance-remove) trigger to run "teardown" logic when an instance is removed.
 
@@ -191,8 +183,6 @@ Most built-in components that support webhooks have a **Delete Instance Webhooks
 ## Preparing for the integration marketplace
 
 Now that we've built and tested a fully functional integration that sets up webhooks and syncs data between GitHub and Zendesk, we're ready to publish it to our [embedded Builder marketplace](/docs/composer/builder/embedding-marketplace.mdx).
-
-<Vimeo video="923064732" />
 
 Additional metadata can be [added](/docs/composer/builder/integrations.mdx/#categorizing-integrations) to our integration, and helpful documentation, images, and even raw HTML can be added to the [config wizard](/docs/composer/builder/configuration-wizard.mdx) that your customers work through.
 
