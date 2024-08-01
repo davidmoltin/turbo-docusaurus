@@ -28,6 +28,7 @@
     "@docusaurus/preset-classic": "2.4.3",
     "@docusaurus/remark-plugin-npm2yarn": "^2.4.3",
     "@docusaurus/theme-common": "^2.4.3",
+    "@docusaurus/theme-classic": "^2.4.3",
     "@docusaurus/theme-live-codeblock": "^2.4.3",
     "@docusaurus/theme-mermaid": "^2.4.3",
     "@docusaurus/utils-common": "^3.4.0",
