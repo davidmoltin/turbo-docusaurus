@@ -10,7 +10,7 @@ All requests to the API need to be accompanied by an authorization header with a
 Authorization: Bearer 212LJ3k0i2382364HIUEjfeJB98yvH
 ```
 
-Authentication INSERT HERE token gives permissions for the client to access their data, and is used to authenticate a request to the API endpoint.
+Authentication token gives permissions for the client to access their data, and is used to authenticate a request to the API endpoint.
 
 :::note
 Read our [Quick Start guide](/guides/Getting-Started/your-first-api-request) on how to make your first API request.

@@ -207,7 +207,7 @@ export default function CommerceAppsMobile() {
             ]}
             linkItems={[
               "https://www.elasticpath.com/demo-library",
-              "/docs/composer",
+              "/composer",
             ]}
           />
 

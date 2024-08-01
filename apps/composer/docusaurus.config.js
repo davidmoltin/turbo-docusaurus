@@ -162,7 +162,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebar-composer.js"),
-          path: "docs/composer",
+          path: "composer",
           routeBasePath: "/",
           editUrl: "https://github.com/elasticpath/elasticpath-dev/tree/main/",
           exclude: [
@@ -336,7 +336,7 @@ const config = {
         hashed: true,
         indexDocs: true,
         indexBlog: false,
-        docsRouteBasePath: ["/docs/composer"],
+        docsRouteBasePath: ["/composer"],
         highlightSearchTermsOnTargetPage: false,
         searchContextByPaths: ["docs","guides","changelog","composer"],
         useAllContextsWithNoSearchContext: true,

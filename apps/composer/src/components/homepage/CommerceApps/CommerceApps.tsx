@@ -229,7 +229,7 @@ export default function CommerceApps() {
               ]}
               linkItems={[
                 "https://www.elasticpath.com/demo-library",
-                "/docs/composer",
+                "/composer",
               ]}
             />
 
