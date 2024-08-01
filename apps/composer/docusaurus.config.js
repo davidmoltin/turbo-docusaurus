@@ -336,9 +336,9 @@ const config = {
         hashed: true,
         indexDocs: true,
         indexBlog: false,
-        docsRouteBasePath: ["/composer"],
+        docsRouteBasePath: ["composer"],
         highlightSearchTermsOnTargetPage: false,
-        searchContextByPaths: ["docs","guides","changelog","composer"],
+        searchContextByPaths: ["composer"],
         useAllContextsWithNoSearchContext: true,
         // For Docs using Chinese, The `language` is recommended to set to:
         // ```
