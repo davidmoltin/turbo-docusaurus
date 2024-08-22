@@ -130,7 +130,7 @@ const config: Config = {
   title: "Elastic Path Documentation",
   tagline: "API, Commerce Manager, Guides and Documentation 🚀",
   url: "https://stover.io",
-  baseUrl: "/composer/",
+  baseUrl: "/self-managed/composer/",
   favicon: "/favicon.ico",
   i18n: {
     defaultLocale: "en",
@@ -153,7 +153,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          path: "composer",
+          path: "self-managed/composer",
           routeBasePath: "/",
           editUrl: "https://github.com/elasticpath/elasticpath-dev/tree/main/",
           exclude: [
