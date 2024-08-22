@@ -40,6 +40,8 @@ servers:
     description: US East
   - url: 'https://euwest.api.elasticpath.com'
     description: EU West
+security:
+  - BearerToken: []
 paths:
   /v2/accounts:
     post:
@@ -170,8 +172,6 @@ paths:
           $ref: '#/components/responses/UnauthorizedError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
   '/v2/accounts/{accountID}':
     get:
       tags:
@@ -200,8 +200,6 @@ paths:
           $ref: '#/components/responses/NotFoundError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
     put:
       tags:
         - Accounts
@@ -341,8 +339,6 @@ paths:
                           example: "Not Found"
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
     delete:
       tags:
         - Accounts
@@ -363,8 +359,6 @@ paths:
           $ref: '#/components/responses/NotFoundError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
   /v2/account-members:
     get:
       tags:
@@ -431,8 +425,6 @@ paths:
           $ref: '#/components/responses/UnauthorizedError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
   '/v2/account-members/{accountMemberID}':
     get:
       tags:
@@ -461,8 +453,6 @@ paths:
           $ref: '#/components/responses/NotFoundError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
   '/v2/accounts/{accountID}/account-memberships':
     post:
       tags:
@@ -496,7 +486,7 @@ paths:
                 value:
                   data:
                     type: account_membership
-                    account_member_id: 9e227208-b592-49c0-8c8f-043b66c634b0
+                    account_member_id: 908f7849-60da-4e4a-a3b1-51d4cbe3b953
       responses:
         '201':
           description: Created
@@ -513,16 +503,12 @@ paths:
           $ref: '#/components/responses/ConflictError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: [ ]
     get:
       tags:
         - Account Membership
       summary: Get all Account Memberships
       description: |-
-        You can also use `include=account_member` to retrieve details about the account members associated with the account memberships.
-
-        With this option, you can get more information about the account members such as name and email in a single request.
+        You can also use `include=account_member` to retrieve details about the account members associated with the account memberships. With this option, you can get more information about the account members such as name and email in a single request. For more information see [including resources](/guides/Getting-Started/includes).
 
         ### Filtering
 
@@ -543,6 +529,7 @@ paths:
         - $ref: '#/components/parameters/sort'
         - $ref: '#/components/parameters/page-limit'
         - $ref: '#/components/parameters/page-offset'
+        - $ref: '#/components/parameters/include-account-member'
         - name: accountID
           in: path
           description: The ID of the account for which you want to get the list of unassigned account members.
@@ -593,15 +580,15 @@ paths:
           $ref: '#/components/responses/NotFoundError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: [ ]
   '/v2/account-members/{accountMemberId}/account-memberships':
     get:
       tags:
         - Account Membership
       summary: Get a List of Account Memberships of Account Member
       description: |
-        You can also use `include=account` to retrieve details about the accounts associated with the account memberships. You can use pagination with this resource. For more information, see [pagination](/guides/Getting-Started/pagination).
+        You can also use `include=account` to retrieve details about the accounts associated with the account memberships. For more information see [including resources](/guides/Getting-Started/includes).
+        
+        You can use pagination with this resource. For more information, see [pagination](/guides/Getting-Started/pagination).
         
         ### Filtering
 
@@ -618,6 +605,7 @@ paths:
       operationId: get-v2-account-members-accountMemberId-account-memberships
       parameters:
         - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/include-account'
         - name: accountMemberId
           in: path
           description: The ID of the account member for which you want to list the memberships.
@@ -668,8 +656,6 @@ paths:
           $ref: '#/components/responses/NotFoundError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
   '/v2/accounts/{accountID}/account-memberships/unassigned-account-members':
     get:
       tags:
@@ -757,16 +743,18 @@ paths:
           $ref: '#/components/responses/ConflictError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
   '/v2/accounts/{accountID}/account-memberships/{membershipID}':
     get:
       tags:
         - Account Membership
       summary: Get an Account Membership
-      description: Get an account membership from an account in your store
+      description: |
+        Get an account membership from an account in your store.
+        
+        You can also use `include=account_member` to retrieve details about the account member associated with this account membership. With this option, you can get more information about the account member such as name and email in a single request. For more information see [including resources](/guides/Getting-Started/includes).
       operationId: get-v2-accounts-accountID-account-memberships-membershipID
       parameters:
+        - $ref: '#/components/parameters/include-account-member'
         - name: accountID
           in: path
           description: The unique identifier of the account that the account member is associated with.
@@ -793,8 +781,6 @@ paths:
           $ref: '#/components/responses/NotFoundError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
     put:
       tags:
         - Account Membership
@@ -830,7 +816,7 @@ paths:
                 value:
                   data:
                     type: account_membership
-                    account_member_id: 9e227208-b592-49c0-8c8f-043b66c634b0
+                    account_member_id: 908f7849-60da-4e4a-a3b1-51d4cbe3b953
       responses:
         '200':
           description: OK
@@ -847,8 +833,6 @@ paths:
           $ref: '#/components/responses/ConflictError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
     delete:
       tags:
         - Account Membership
@@ -875,8 +859,6 @@ paths:
           $ref: '#/components/responses/NotFoundError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
   /v2/settings/account-membership:
     get:
       tags:
@@ -895,8 +877,6 @@ paths:
           $ref: '#/components/responses/UnauthorizedError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
     put:
       tags:
         - Account Membership Settings
@@ -925,8 +905,6 @@ paths:
           $ref: '#/components/responses/BadRequestError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
   /v2/settings/account-authentication:
     get:
       tags:
@@ -945,8 +923,6 @@ paths:
           $ref: '#/components/responses/UnauthorizedError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
     put:
       tags:
         - Account Authentication Settings
@@ -972,8 +948,6 @@ paths:
           $ref: '#/components/responses/BadRequestError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
   /v2/account-members/tokens:
     post:
       tags:
@@ -1096,8 +1070,6 @@ paths:
           $ref: '#/components/responses/UnauthorizedError'
         default:
           $ref: '#/components/responses/InternalServerError'
-      security:
-        - BearerToken: []
 tags:
   - name: Accounts
     description: |
@@ -1162,6 +1134,20 @@ components:
         minimum: 0
         maximum: 10000
         example: 10
+    include-account-member:
+      name: 'include'
+      in: query
+      description: Parameter to retrieve more information about any related resources like account members.
+      schema:
+        type: string
+        example: account_member
+    include-account:
+      name: 'include'
+      in: query
+      description: Parameter to retrieve more information about any related resources like accounts.
+      schema:
+        type: string
+        example: account
     sort:
       name: sort
       in: query
@@ -1407,7 +1393,7 @@ components:
         account_member_id:
           type: string
           description: Specifies the unique identifier of the account member that the membership is associated with.
-          example: 9e227208-b592-49c0-8c8f-043b66c634b0
+          example: 908f7849-60da-4e4a-a3b1-51d4cbe3b953
         type:
           type: string
           default: account_membership
@@ -1436,7 +1422,7 @@ components:
                     id:
                       description: Specifies the ID of the account member.
                       type: string
-                      example: 9e227208-b592-49c0-8c8f-043b66c634b0
+                      example: 908f7849-60da-4e4a-a3b1-51d4cbe3b953
                     type:
                       description: Specifies the type of the account member.
                       type: string
@@ -1464,18 +1450,18 @@ components:
         relationships:
           type: object
           properties:
-            account_member:
+            account:
               type: object
               properties:
                 data:
                   type: object
                   properties:
                     id:
-                      description: Specifies the ID of the account member.
+                      description: Specifies the ID of the account.
                       type: string
-                      example: 9e227208-b592-49c0-8c8f-043b66c634b0
+                      example: 908f7849-60da-4e4a-a3b1-51d4cbe3b953
                     type:
-                      description: Specifies the type of the Account Member.
+                      description: Specifies the type of the Account.
                       type: string
                       default: account
         links:
@@ -1641,7 +1627,7 @@ components:
           description: The ID of the account that this token grants access to.
           type: string
           format: uuid
-          example: 9e227208-b592-49c0-8c8f-043b66c634b0
+          example: 908f7849-60da-4e4a-a3b1-51d4cbe3b953
         token:
           description: The JWT authentication token that the shopper uses as the `EP-Account-Management-Authentication-Token` header [in all other endpoints](https://elasticpath.dev/docs/commerce-cloud/authentication/tokens/account-management-authentication-token).
           type: string
@@ -1776,5 +1762,3 @@ components:
                     }
                   ]
                 }
-security:
-  - BearerToken: []

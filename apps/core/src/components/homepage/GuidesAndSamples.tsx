@@ -53,7 +53,7 @@ const samples: Sample[] = [
     platform: 'NextJS',
     source: 'https://github.com/',
     blog: 'https://elasticpath.com/blog',
-    demo: 'https://elasticpath.dev',
+    demo: 'https://elsaticpath.dev',
   },
   {
     title: 'JS SDK',
