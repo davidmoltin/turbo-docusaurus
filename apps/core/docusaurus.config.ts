@@ -605,6 +605,9 @@ const config: Config = {
         showReadingTime: false,
         feedOptions: {
           type: "all",
+          xslt: {
+            xslt: true,
+          },
           copyright: `Copyright © ${new Date().getFullYear()} Elastic Path`,
           description: "Elastic Path Cloud Services Changelog",
           createFeedItems: async (params) => {
